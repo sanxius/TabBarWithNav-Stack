@@ -1,0 +1,30 @@
+
+/* Class = "UITabBarItem"; title = "Info"; ObjectID = "1I7-5m-T9S"; */
+"1I7-5m-T9S.title" = "Info";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "4ZZ-Vg-Xxe"; */
+"4ZZ-Vg-Xxe.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; normalTitle = "PREMI"; ObjectID = "5nP-P6-H0n"; */
+"5nP-P6-H0n.normalTitle" = "PREMI";
+
+/* Class = "UINavigationItem"; title = "INTRO"; ObjectID = "MpG-Ra-XO0"; */
+"MpG-Ra-XO0.title" = "INTRO";
+
+/* Class = "UISegmentedControl"; NrS-dA-z5B.segmentTitles[0] = "First"; ObjectID = "NrS-dA-z5B"; */
+"NrS-dA-z5B.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; NrS-dA-z5B.segmentTitles[1] = "Second"; ObjectID = "NrS-dA-z5B"; */
+"NrS-dA-z5B.segmentTitles[1]" = "Second";
+
+/* Class = "UITabBarItem"; title = "QR Code"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "QR Code";
+
+/* Class = "UITabBarItem"; title = "Seleziona"; ObjectID = "bj5-8X-sdJ"; */
+"bj5-8X-sdJ.title" = "Seleziona";
+
+/* Class = "UINavigationItem"; title = "Filmati"; ObjectID = "gs4-Qg-qTX"; */
+"gs4-Qg-qTX.title" = "Filmati";
+
+/* Class = "UITabBarItem"; title = "Intro"; ObjectID = "zfz-zm-ySt"; */
+"zfz-zm-ySt.title" = "Intro";

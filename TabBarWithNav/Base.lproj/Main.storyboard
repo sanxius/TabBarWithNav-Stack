@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zra-3h-hRo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Play Controller-->
+        <scene sceneID="8Sb-A8-ALt">
+            <objects>
+                <viewController id="Hhd-JQ-QwD" customClass="moviePlayController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FiC-t3-KQK"/>
+                        <viewControllerLayoutGuide type="bottom" id="BJf-VI-UQe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XcA-w0-Hrh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="RosellaPNG.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-ed-xJW">
+                                <rect key="frame" x="-27" y="100" width="654" height="480"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bk3-ed-xJW" secondAttribute="height" multiplier="109:80" id="on7-Cb-uk6"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-8S-8Yd" userLabel="Segment Control">
+                                <rect key="frame" x="161" y="64" width="278" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="MOf-p3-Oms"/>
+                                    <constraint firstAttribute="height" constant="28" id="epx-lk-5f5"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Video"/>
+                                    <segment title="Text"/>
+                                </segments>
+                                <color key="tintColor" red="0.65490196079999996" green="0.14117647059999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlChanged" destination="1Us-Ho-dg5" eventType="valueChanged" id="1FI-0H-VS8"/>
+                                    <action selector="segmentedControlChanged" destination="Hhd-JQ-QwD" eventType="valueChanged" id="C1F-U2-6an"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bk3-ed-xJW" firstAttribute="centerY" secondItem="XcA-w0-Hrh" secondAttribute="centerY" id="3YY-qe-7F6"/>
+                            <constraint firstItem="Bk3-ed-xJW" firstAttribute="centerX" secondItem="XcA-w0-Hrh" secondAttribute="centerX" id="QAA-sP-z7p"/>
+                            <constraint firstItem="Bk3-ed-xJW" firstAttribute="top" secondItem="FiC-t3-KQK" secondAttribute="bottom" constant="36" id="UMk-1w-fBS"/>
+                            <constraint firstItem="hu7-8S-8Yd" firstAttribute="centerX" secondItem="XcA-w0-Hrh" secondAttribute="centerX" id="qD5-ZH-9NH"/>
+                            <constraint firstItem="hu7-8S-8Yd" firstAttribute="top" secondItem="FiC-t3-KQK" secondAttribute="bottom" id="yp7-IN-4Tc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="hu7-8S-8Yd" id="GmA-er-WL2"/>
+                        <outlet property="selectPush" destination="Bk3-ed-xJW" id="es8-XU-jxa"/>
+                        <segue destination="gSo-6s-BD7" kind="show" identifier="segueVideo" id="EKQ-BT-I1G"/>
+                        <segue destination="lPf-3r-Yc3" kind="show" identifier="segueTesto" id="vkg-cW-23x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bha-jB-XAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="1841"/>
+        </scene>
+        <!--Play Movie Swift-->
+        <scene sceneID="SlG-3f-JIS">
+            <objects>
+                <viewController id="gSo-6s-BD7" customClass="playMovieSwift" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YX0-vO-FXb"/>
+                        <viewControllerLayoutGuide type="bottom" id="p2w-hF-BRt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tyo-pv-qxh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3r3-eU-X5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="1849"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="4ZZ-Vg-Xxe">
+                                <rect key="frame" x="20" y="64" width="560" height="291"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ZZ-Vg-Xxe" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="R1h-9g-Pfg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="4ZZ-Vg-Xxe" secondAttribute="leading" id="Rb8-xL-pZZ"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="4ZZ-Vg-Xxe" secondAttribute="bottom" constant="196" id="gmw-55-FH3"/>
+                            <constraint firstItem="4ZZ-Vg-Xxe" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="uss-3C-uT9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="info25x25.png" id="1I7-5m-T9S" userLabel="Info">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171" y="-162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UEQ-gd-gNJ">
+            <objects>
+                <navigationController id="Zra-3h-hRo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iKB-JW-wEg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.64705882349999999" green="0.1450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="u8l-WO-J9u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oiC-2e-tiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="-162"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" customClass="TabBarController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JGq-CI-YNx">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="tintColor" red="0.64705882349999999" green="0.1450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.64705882349999999" green="0.1450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.64705882349999999" green="0.1450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1Us-Ho-dg5" kind="relationship" relationship="viewControllers" id="Wut-P1-LdX"/>
+                        <segue destination="Tqh-zi-tBk" kind="relationship" relationship="viewControllers" id="frx-wk-tny"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="eYA-m6-ypD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="-162"/>
+        </scene>
+        <!--VidSelection-->
+        <scene sceneID="1fd-bS-KtG">
+            <objects>
+                <viewController id="Tqh-zi-tBk" userLabel="VidSelection" customClass="movieController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="APz-5H-LGZ" userLabel="TableScene"/>
+                        <viewControllerLayoutGuide type="bottom" id="c2x-4S-mpK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jR1-GU-frC">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="26" translatesAutoresizingMaskIntoConstraints="NO" id="Z69-u9-moo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="vocemovieCell" rowHeight="5" id="TvW-NJ-bfM">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TvW-NJ-bfM" id="5cn-pt-7p5">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="4.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Tqh-zi-tBk" id="IRE-Av-Q3w"/>
+                                    <outlet property="delegate" destination="Tqh-zi-tBk" id="hGD-mz-rzV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.99505919710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z69-u9-moo" firstAttribute="centerX" secondItem="jR1-GU-frC" secondAttribute="centerX" id="Gim-4V-GOr"/>
+                            <constraint firstItem="c2x-4S-mpK" firstAttribute="top" secondItem="Z69-u9-moo" secondAttribute="bottom" id="abj-3H-8JB"/>
+                            <constraint firstItem="Z69-u9-moo" firstAttribute="leading" secondItem="jR1-GU-frC" secondAttribute="leadingMargin" constant="-20" id="ded-a4-2iO"/>
+                            <constraint firstItem="Z69-u9-moo" firstAttribute="top" secondItem="jR1-GU-frC" secondAttribute="topMargin" constant="67" id="lRq-qo-JRz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z69-u9-moo" secondAttribute="trailing" constant="-20" id="oFH-GI-iV9"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Filmati" image="film_clapper-25.png" id="hPV-nW-UK1">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="Z69-u9-moo" id="fed-GT-Cpe"/>
+                        <segue destination="Hhd-JQ-QwD" kind="show" identifier="segueSelezione" id="FRx-7J-qKz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOP-eo-gvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="655"/>
+        </scene>
+        <!--INTRO-->
+        <scene sceneID="vCf-zV-lap">
+            <objects>
+                <viewController id="1Us-Ho-dg5" customClass="introMovie" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="scg-w8-JSB"/>
+                        <viewControllerLayoutGuide type="bottom" id="X4e-ri-Ez9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y85-xW-NUS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EDF-US-oBY">
+                                <rect key="frame" x="161" y="64" width="278" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="3Xs-wy-xva"/>
+                                    <constraint firstAttribute="height" constant="28" id="PMA-68-qDd"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Video"/>
+                                    <segment title="Text"/>
+                                </segments>
+                                <color key="tintColor" red="0.65490196079999996" green="0.14117647059999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlChanged" destination="1Us-Ho-dg5" eventType="valueChanged" id="Zjx-jG-3oC"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="RosellaPNG.png" translatesAutoresizingMaskIntoConstraints="NO" id="S20-RZ-X9Z">
+                                <rect key="frame" x="0.0" y="96" width="620" height="455"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="S20-RZ-X9Z" secondAttribute="height" multiplier="124:91" id="pVN-qt-RdN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S20-RZ-X9Z" firstAttribute="centerX" secondItem="y85-xW-NUS" secondAttribute="centerX" id="2v6-Cc-MiA"/>
+                            <constraint firstItem="S20-RZ-X9Z" firstAttribute="centerY" secondItem="y85-xW-NUS" secondAttribute="centerY" id="Ins-Ft-2T4"/>
+                            <constraint firstItem="EDF-US-oBY" firstAttribute="centerX" secondItem="y85-xW-NUS" secondAttribute="centerX" id="Wt0-kW-ZrL"/>
+                            <constraint firstItem="EDF-US-oBY" firstAttribute="top" secondItem="scg-w8-JSB" secondAttribute="bottom" id="vsM-DV-jov"/>
+                            <constraint firstItem="S20-RZ-X9Z" firstAttribute="top" secondItem="EDF-US-oBY" secondAttribute="bottom" constant="4" id="zbL-7m-ag7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Intro" image="home.png" id="yYg-fO-B3r">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="INTRO" id="MpG-Ra-XO0"/>
+                    <connections>
+                        <outlet property="introPush" destination="S20-RZ-X9Z" id="fDx-Qu-7IZ"/>
+                        <outlet property="segmentControl" destination="EDF-US-oBY" id="hXj-h7-SOh"/>
+                        <segue destination="gSo-6s-BD7" kind="show" identifier="segueIntroMovie" id="hUq-co-pAI"/>
+                        <segue destination="lPf-3r-Yc3" kind="show" identifier="segueIntroTesto" id="m12-Of-Rzz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Dn-vF-bey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="655"/>
+        </scene>
+        <!--TextController-->
+        <scene sceneID="Vrm-NR-LTA">
+            <objects>
+                <viewController id="lPf-3r-Yc3" userLabel="TextController" customClass="TextControllerSwift" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9ec-ON-z33"/>
+                        <viewControllerLayoutGuide type="bottom" id="rkp-Ju-Gje"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jx1-Pu-moW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhg-td-Jec" customClass="testoMuseo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1895"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dhg-td-Jec" secondAttribute="trailing" id="Wrf-us-Rgq"/>
+                            <constraint firstItem="dhg-td-Jec" firstAttribute="leading" secondItem="Jx1-Pu-moW" secondAttribute="leading" id="hjR-BF-dbc"/>
+                            <constraint firstItem="dhg-td-Jec" firstAttribute="top" secondItem="Jx1-Pu-moW" secondAttribute="top" id="k6J-uL-Pw5"/>
+                            <constraint firstAttribute="bottom" secondItem="dhg-td-Jec" secondAttribute="bottom" id="qt8-jH-2QX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testoMuseo" destination="dhg-td-Jec" id="HVU-vX-cJp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbH-sB-Lo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="1819"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RosellaPNG.png" width="640" height="480"/>
+        <image name="film_clapper-25.png" width="25" height="25"/>
+        <image name="home.png" width="25" height="25"/>
+        <image name="info25x25.png" width="25" height="25"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EKQ-BT-I1G"/>
+        <segue reference="vkg-cW-23x"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>
